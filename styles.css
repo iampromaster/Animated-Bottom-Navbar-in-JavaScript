@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+
+.nav {
+  width: 328px;
+  height: 72px;
+  background: #fff;
+  padding: 24px 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.nav-list .link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-list .link i {
+  font-size: 24px;
+  color: #222;
+  transition: 0.3s;
+  z-index: 20;
+}
+
+.nav-list .link.active i {
+  color: #fff;
+}
+
+.nav-list .link span {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 500;
+  transform: translateY(50px);
+  color: #fff;
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 20;
+}
+
+.nav-list .link.active span {
+  opacity: 1;
+  transform: translateY(28px);
+}
+
+.nav .nav-list .indicator {
+  position: absolute;
+  left: 7px;
+  bottom: 0;
+  fill: #222;
+  transition: 0.3s;
+}
+.nav .nav-list .link:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(56px * 0));
+}
+
+.nav .nav-list .link:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(56px * 1));
+}
+
+.nav .nav-list .link:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(56px * 2));
+}
+
+.nav .nav-list .link:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(56px * 3));
+}
+
+.nav .nav-list .link:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(56px * 4));
+}
